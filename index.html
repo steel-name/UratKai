@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URATKAI | 杢会 — Premium Timber & Architectural Wood Solutions</title>
+    <meta name="description" content="URATKAI (杢会) delivers export-grade Indonesian teak and premium timber processed with legendary Japanese precision. Exclusively for global B2B projects.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Serif+JP:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS with custom configuration -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        yakisugi: '#0E0E10',     // Deepest Carbon Gray (Black-gray)
+                        shale: '#1E1E22',        // Card & Panel Dark Gray
+                        slateborder: '#2C2C2E',   // Dark Border Gray
+                        moku: '#F4F4F6',         // Platinum/Light Ash Gray background
+                        mokuText: '#27272A',     // Deep Zinc dark text
+                        silver: '#AEAEB2',       // Premium text-muted Gray
+                        kintsugi: '#C5A880',     // Luxury Gold accent
+                        kintsugiDark: '#A8895E', // Hover Gold
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'Noto Sans JP', 'sans-serif'],
+                        serif: ['"Noto Serif JP"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Premium Custom Styles -->
+    <style>
+        /* Custom scrollbar for premium feel */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0E0E10;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #2C2C2E;
+            border-radius: 4px;
+            border: 2px solid #0E0E10;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #C5A880;
+        }
+
+        body {
+            background-color: #F4F4F6;
+            color: #27272A;
+            font-family: 'Inter', 'Noto Sans JP', sans-serif;
+        }
+        
+        .font-serif-jp {
+            font-family: 'Noto Serif JP', serif;
+        }
+
+        /* Glassmorphism */
+        .glass-nav {
+            background-color: rgba(14, 14, 16, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(197, 168, 128, 0.15);
+        }
+
+        /* Scroll reveal effects */
+        .reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Ensure mobile menu has solid premium dark background with glassmorphism */
+        #mobile-menu {
+            background-color: rgba(14, 14, 16, 0.98) !important;
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+
+        /* Special override for centered reveal elements (e.g. hero specs capsule) */
+        .reveal.reveal-capsule {
+            transform: translate(-50%, 24px);
+        }
+        .reveal.reveal-capsule.active {
+            transform: translate(-50%, 0);
+        }
+
+        /* Hover image effects */
+        .image-container {
+            overflow: hidden;
+            position: relative;
+        }
+        .image-container img {
+            transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .image-container:hover img {
+            transform: scale(1.06);
+        }
+        
+        /* Subtle Gold Shimmer Animation for exclusive elements */
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+        .shimmer-gold {
+            background: linear-gradient(90deg, rgba(197,168,128,0.1) 25%, rgba(197,168,128,0.3) 50%, rgba(197,168,128,0.1) 75%);
+            background-size: 200% 100%;
+            animation: shimmer 4s infinite linear;
+        }
+    </style>
+</head>
+<body class="antialiased overflow-x-hidden">
+
+    <!-- Premium Loader -->
+    <div id="loader" class="fixed inset-0 bg-yakisugi flex flex-col justify-center items-center z-50 transition-all duration-700 ease-out">
+        <div class="text-center">
+            <span class="text-xs tracking-[0.4em] text-kintsugi uppercase font-light block mb-2">杢会 — CRAFTSMANSHIP GUILD</span>
+            <h2 class="text-3xl md:text-4xl font-serif-jp text-moku tracking-[0.2em] font-light">URATKAI</h2>
+            <div class="mt-8 flex justify-center space-x-1.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-kintsugi animate-bounce" style="animation-delay: 0.1s"></span>
+                <span class="w-1.5 h-1.5 rounded-full bg-kintsugi animate-bounce" style="animation-delay: 0.3s"></span>
+                <span class="w-1.5 h-1.5 rounded-full bg-kintsugi animate-bounce" style="animation-delay: 0.5s"></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= NAVBAR ================= -->
+    <nav id="navbar" class="fixed w-full z-40 py-5 px-6 lg:px-16 transition-all duration-500 ease-out border-b border-transparent">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            
+            <!-- Brand Logo -->
+            <a href="#home" class="flex items-center space-x-3 group">
+                <div class="flex flex-col text-left">
+                    <span class="text-xs tracking-[0.3em] text-kintsugi font-medium block">杢会</span>
+                    <span class="text-xl md:text-2xl font-serif-jp font-light tracking-[0.2em] text-moku uppercase transition-colors group-hover:text-kintsugi">URATKAI</span>
+                </div>
+            </a>
+
+            <!-- Desktop Menu (Minimal & Clean) -->
+            <div class="hidden lg:flex items-center space-x-12 text-xs tracking-[0.2em] uppercase font-light text-silver">
+                <a href="#home" class="hover:text-kintsugi transition-colors py-2 relative group">
+                    Home
+                    <span class="absolute bottom-0 left-0 w-0 h-[1px] bg-kintsugi transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="#philosophy" class="hover:text-kintsugi transition-colors py-2 relative group">
+                    Philosophy
+                    <span class="absolute bottom-0 left-0 w-0 h-[1px] bg-kintsugi transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="#catalog" class="hover:text-kintsugi transition-colors py-2 relative group">
+                    Collection
+                    <span class="absolute bottom-0 left-0 w-0 h-[1px] bg-kintsugi transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="#trust" class="hover:text-kintsugi transition-colors py-2 relative group">
+                    Global Standards
+                    <span class="absolute bottom-0 left-0 w-0 h-[1px] bg-kintsugi transition-all duration-300 group-hover:w-full"></span>
+                </a>
+            </div>
+
+            <!-- CTA Direct Inquiry Button -->
+            <div class="hidden lg:block">
+                <a href="#inquiry" class="px-6 py-2.5 border border-kintsugi/40 rounded-sm hover:border-kintsugi hover:bg-kintsugi hover:text-yakisugi text-xs text-kintsugi tracking-[0.2em] uppercase transition-all duration-500 font-medium">
+                    Private Inquiry
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="mobile-menu-btn" class="lg:hidden text-moku focus:outline-none p-2 -mr-2 z-50 relative flex flex-col justify-center items-center w-11 h-11 bg-shale border border-kintsugi/40 rounded-full shadow-xl hover:border-kintsugi transition-all duration-300" aria-label="Toggle Menu">
+                <span id="burger-line-1" class="w-5 h-[1.5px] bg-moku transition-all duration-300 ease-out my-[2.5px] rounded-full"></span>
+                <span id="burger-line-2" class="w-5 h-[1.5px] bg-moku transition-all duration-300 ease-out my-[2.5px] rounded-full"></span>
+                <span id="burger-line-3" class="w-5 h-[1.5px] bg-moku transition-all duration-300 ease-out my-[2.5px] rounded-full"></span>
+            </button>
+        </div>
+
+        <!-- Mobile Fullscreen Menu Dropdown -->
+        <div id="mobile-menu" class="lg:hidden fixed top-0 left-0 w-full h-screen bg-yakisugi/98 z-30 flex flex-col justify-center items-center opacity-0 invisible transition-all duration-500 ease-in-out">
+            <div class="flex flex-col items-center space-y-8 text-center">
+                <!-- Decorative Japanese character -->
+                <span class="text-4xl text-kintsugi/20 font-serif-jp">杢</span>
+                
+                <a href="#home" class="mobile-link text-lg tracking-[0.25em] text-moku hover:text-kintsugi transition-colors uppercase font-light">Home</a>
+                <a href="#philosophy" class="mobile-link text-lg tracking-[0.25em] text-moku hover:text-kintsugi transition-colors uppercase font-light">Philosophy</a>
+                <a href="#catalog" class="mobile-link text-lg tracking-[0.25em] text-moku hover:text-kintsugi transition-colors uppercase font-light">Collection</a>
+                <a href="#trust" class="mobile-link text-lg tracking-[0.25em] text-moku hover:text-kintsugi transition-colors uppercase font-light">Global Standards</a>
+                
+                <div class="pt-8">
+                    <a href="#inquiry" class="mobile-link px-8 py-3.5 border border-kintsugi/60 text-kintsugi hover:bg-kintsugi hover:text-yakisugi text-xs tracking-[0.2em] uppercase transition-all rounded-sm font-medium">
+                        Initiate Consultation
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ================= HERO SECTION ================= -->
+    <header id="home" class="relative h-screen bg-yakisugi flex items-center justify-center overflow-hidden">
+        <!-- Sleek Radial Vignette overlay -->
+        <div class="absolute inset-0 bg-gradient-to-b from-yakisugi via-transparent to-yakisugi/80 z-10"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0)_20%,rgba(14,14,16,0.95)_80%)] z-10"></div>
+        
+        <!-- Large Background Image (Premium woodwork craft image) -->
+        <div class="absolute inset-0 opacity-40 transition-opacity duration-1000 ease-out" id="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=2000&auto=format&fit=crop'); background-size: cover; background-position: center; transform: translate3d(0, 0, 0) scale(1.15); will-change: transform;"></div>
+        
+        <!-- Luxury texture overlay -->
+        <div class="absolute inset-0 opacity-[0.03] z-10 bg-[radial-gradient(rgba(255,255,255,0.15)_1px,transparent_1px)] [background-size:16px_16px]"></div>
+
+        <!-- Content -->
+        <div class="relative z-20 text-center px-6 max-w-5xl mx-auto flex flex-col items-center pt-20">
+            <!-- Sleek Badge -->
+            <div class="flex items-center space-x-3 mb-6 reveal">
+                <span class="w-8 h-[1px] bg-kintsugi/50"></span>
+                <span class="text-kintsugi text-xs md:text-sm tracking-[0.4em] uppercase font-light">B2B Architectural Wood Guild</span>
+                <span class="w-8 h-[1px] bg-kintsugi/50"></span>
+            </div>
+            
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-serif-jp text-moku leading-[1.2] tracking-[0.1em] font-light mb-8 reveal" style="transition-delay: 200ms;">
+                Indonesian Teak.<br/>
+                <span class="text-kintsugi">Japanese Precision.</span>
+            </h1>
+            
+            <p class="text-silver/90 text-sm md:text-base lg:text-lg max-w-2xl font-light mb-12 leading-relaxed tracking-wide reveal" style="transition-delay: 400ms;">
+                Engineered for global luxury projects, commercial structures, and custom manufacturing. Processed under absolute structural standards for high-net-worth developers and global builders.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-6 reveal" style="transition-delay: 600ms;">
+                <a href="#catalog" class="px-8 py-3.5 bg-kintsugi text-yakisugi text-xs font-semibold tracking-[0.24em] uppercase rounded-sm hover:bg-moku hover:text-yakisugi transition-all duration-500 shadow-md">
+                    Explore Collection
+                </a>
+                <a href="#inquiry" class="px-8 py-3.5 border border-moku/30 text-moku text-xs font-medium tracking-[0.24em] uppercase rounded-sm hover:bg-moku/10 hover:border-kintsugi transition-all duration-500">
+                    B2B Configurator
+                </a>
+            </div>
+        </div> <!-- End of content container -->
+
+        <!-- Absolute Bottom Coordinates / Specs (Responsive dark glassmorphic capsule, placed relative to whole header container) -->
+        <div class="absolute bottom-10 left-1/2 z-20 px-6 py-4 md:py-3.5 bg-yakisugi/85 backdrop-blur-md border border-kintsugi/20 rounded-xl md:rounded-full flex flex-col md:flex-row items-center justify-between gap-3 md:gap-10 text-[9px] md:text-[10px] text-moku tracking-[0.25em] uppercase w-[90%] md:w-auto shadow-2xl reveal reveal-capsule" style="transition-delay: 800ms;">
+            <div class="flex items-center space-x-2.5">
+                <span class="text-kintsugi font-medium">Origin:</span>
+                <span class="font-light">Java, Indonesia</span>
+            </div>
+            <span class="hidden md:inline text-kintsugi/30">|</span>
+            <div class="flex items-center space-x-2.5">
+                <span class="text-kintsugi font-medium">Forestry:</span>
+                <span class="font-light">SVLK Legal Certified</span>
+            </div>
+            <span class="hidden md:inline text-kintsugi/30">|</span>
+            <div class="flex items-center space-x-2.5">
+                <span class="text-kintsugi font-medium">Tolerances:</span>
+                <span class="font-light">± 0.2mm Precision</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- ================= BRAND PHILOSOPHY SECTION ================= -->
+    <section id="philosophy" class="py-28 lg:py-36 px-6 lg:px-16 bg-moku relative">
+        <!-- Subtle Japanese Calligraphy Stamp Concept -->
+        <div class="absolute top-20 right-10 lg:right-32 text-yakisugi/[0.03] text-9xl font-serif-jp select-none pointer-events-none">
+            杢会
+        </div>
+
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col lg:flex-row gap-16 lg:gap-24 items-center">
+                
+                <!-- Image Section with Luxury Frame -->
+                <div class="w-full lg:w-1/2 reveal">
+                    <div class="relative image-container rounded-sm shadow-2xl border border-slateborder/10">
+                        <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1200&auto=format&fit=crop" alt="Premium Wood Craftsmanship" class="w-full h-[540px] object-cover" loading="lazy">
+                        <!-- Luxury Dark Charcoal Overlay Border -->
+                        <div class="absolute inset-0 border border-white/10 pointer-events-none"></div>
+                        <div class="absolute -bottom-4 -left-4 w-32 h-32 border-b-2 border-l-2 border-kintsugi/30 -z-10"></div>
+                    </div>
+                </div>
+                
+                <!-- Brand Narrative -->
+                <div class="w-full lg:w-1/2 reveal" style="transition-delay: 200ms;">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <span class="text-kintsugi font-serif-jp text-lg">杢会</span>
+                        <span class="w-8 h-[1px] bg-kintsugi/60"></span>
+                        <span class="text-xs text-silver tracking-[0.25em] uppercase font-light">Heritage & Naming</span>
+                    </div>
+                    
+                    <h2 class="text-3xl md:text-4xl font-serif-jp text-yakisugi leading-[1.3] font-light mb-8">
+                        The Origin of <span class="text-kintsugi">URATKAI</span>
+                    </h2>
+                    
+                    <p class="text-mokuText/80 leading-relaxed font-light text-sm md:text-base mb-6">
+                        Among global architects and master woodworkers, true quality is not merely measured by what is visible on the surface, but by the deepest grain structure that provides enduring integrity.
+                    </p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 my-10 border-t border-b border-zinc-200 py-8">
+                        <div>
+                            <h4 class="text-kintsugi font-serif-jp text-lg mb-2">URAT <span class="text-xs text-silver block tracking-wider uppercase font-light">The Core Veins</span></h4>
+                            <p class="text-xs text-zinc-600 font-light leading-relaxed">
+                                Represents the natural beauty and organic durability of the archipelago's finest teak, matured naturally to form an exclusive, robust grain pattern ("Urat") rich in protective oils.
+                            </p>
+                        </div>
+                        <div>
+                            <h4 class="text-kintsugi font-serif-jp text-lg mb-2">KAI / 会 <span class="text-xs text-silver block tracking-wider uppercase font-light">The Master Guild</span></h4>
+                            <p class="text-xs text-zinc-600 font-light leading-relaxed">
+                                Derived from the Japanese term representing a meeting, assembly, or master artisan guild. This symbolizes our commitment to millimeter-level precision, akin to traditional Japanese carpentry.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <p class="text-mokuText/70 leading-relaxed font-light text-sm">
+                        We bridge two worlds: the unparalleled biological wealth of Indonesian tropical forests, processed with the absolute technical precision and work philosophy of Japan. **URATKAI (杢会)** is the promise of structural strength, functionality, and understated luxury (Wabi-Sabi).
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= PRODUCTS / CATALOG SECTION ================= -->
+    <section id="catalog" class="py-28 lg:py-36 px-6 lg:px-16 bg-yakisugi text-moku relative border-t border-kintsugi/10">
+        <!-- Abstract grid pattern -->
+        <div class="absolute inset-0 opacity-[0.01] pointer-events-none bg-[linear-gradient(to_right,#C5A880_1px,transparent_1px),linear-gradient(to_bottom,#C5A880_1px,transparent_1px)] [background-size:80px_80px]"></div>
+
+        <div class="max-w-7xl mx-auto relative z-10">
+            <!-- Section Header -->
+            <div class="flex flex-col items-center text-center mb-20 reveal">
+                <span class="text-kintsugi text-xs tracking-[0.4em] uppercase font-light block mb-3">CURATED SELECTION</span>
+                <h2 class="text-3xl md:text-5xl font-serif-jp font-light tracking-[0.1em]">Premium Material Catalog</h2>
+                <div class="w-16 h-[1px] bg-kintsugi/60 mt-6"></div>
+            </div>
+
+            <!-- Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Product 1 -->
+                <div class="group bg-shale border border-slateborder rounded-sm overflow-hidden reveal hover:border-kintsugi/40 transition-all duration-500 flex flex-col justify-between">
+                    <div>
+                        <div class="image-container h-72 border-b border-slateborder">
+                            <img src="https://images.unsplash.com/photo-1533090161767-e6ffed986c88?q=80&w=800&auto=format&fit=crop" alt="Premium Teak Planks" class="w-full h-full object-cover" loading="lazy">
+                            <!-- Technical Badge overlay -->
+                            <span class="absolute top-4 left-4 px-3 py-1 bg-yakisugi/90 border border-kintsugi/30 text-kintsugi text-[10px] tracking-widest uppercase font-light">Grade A prime</span>
+                        </div>
+                        <div class="p-8">
+                            <h3 class="text-xl font-serif-jp text-moku mb-3 group-hover:text-kintsugi transition-colors">Teak Boards (杢板)</h3>
+                            <p class="text-xs text-silver tracking-widest mb-4">4000mm × 150mm × 25mm • KD < 10%</p>
+                            <p class="text-silver/70 text-xs font-light leading-relaxed mb-6">Select teak boards kiln-dried to under 10% moisture content to prevent warping, ideal for premium decking and luxury yacht construction.</p>
+                        </div>
+                    </div>
+                    <div class="px-8 pb-8">
+                        <div class="flex justify-between items-center text-xs border-t border-slateborder pt-4">
+                            <span class="text-kintsugi/80 font-light">Durability: Class I</span>
+                            <a href="#inquiry" onclick="prefillWood('Teak Boards (杢板)', '4000x150x25mm')" class="text-silver hover:text-kintsugi transition-colors flex items-center space-x-1 uppercase tracking-wider text-[10px]">
+                                <span>Request Specs</span>
+                                <span>&rarr;</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="group bg-shale border border-slateborder rounded-sm overflow-hidden reveal hover:border-kintsugi/40 transition-all duration-500 flex flex-col justify-between" style="transition-delay: 150ms;">
+                    <div>
+                        <div class="image-container h-72 border-b border-slateborder">
+                            <img src="https://images.unsplash.com/photo-1590216194451-c032ec845a7c?q=80&w=800&auto=format&fit=crop" alt="Structural Teak Beams" class="w-full h-full object-cover" loading="lazy">
+                            <span class="absolute top-4 left-4 px-3 py-1 bg-yakisugi/90 border border-kintsugi/30 text-kintsugi text-[10px] tracking-widest uppercase font-light">Structural Grade</span>
+                        </div>
+                        <div class="p-8">
+                            <h3 class="text-xl font-serif-jp text-moku mb-3 group-hover:text-kintsugi transition-colors">Heavy Beams (柱材)</h3>
+                            <p class="text-xs text-silver tracking-widest mb-4">Bespoke Custom Size • Heartwood > 95%</p>
+                            <p class="text-silver/70 text-xs font-light leading-relaxed mb-6">Large-scale structural timber beams with heartwood content exceeding 95%. Engineered for high mechanical strength, ideal for luxury structural pillars.</p>
+                        </div>
+                    </div>
+                    <div class="px-8 pb-8">
+                        <div class="flex justify-between items-center text-xs border-t border-slateborder pt-4">
+                            <span class="text-kintsugi/80 font-light">Strength: Class I-II</span>
+                            <a href="#inquiry" onclick="prefillWood('Heavy Beams (柱材)', 'Custom Dimensions')" class="text-silver hover:text-kintsugi transition-colors flex items-center space-x-1 uppercase tracking-wider text-[10px]">
+                                <span>Request Specs</span>
+                                <span>&rarr;</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="group bg-shale border border-slateborder rounded-sm overflow-hidden reveal hover:border-kintsugi/40 transition-all duration-500 flex flex-col justify-between" style="transition-delay: 300ms;">
+                    <div>
+                        <div class="image-container h-72 border-b border-slateborder">
+                            <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=800&auto=format&fit=crop" alt="Outdoor Decking Teak" class="w-full h-full object-cover" loading="lazy">
+                            <span class="absolute top-4 left-4 px-3 py-1 bg-yakisugi/90 border border-kintsugi/30 text-kintsugi text-[10px] tracking-widest uppercase font-light">All-Weather</span>
+                        </div>
+                        <div class="p-8">
+                            <h3 class="text-xl font-serif-jp text-moku mb-3 group-hover:text-kintsugi transition-colors">Exquisite Decking (敷板)</h3>
+                            <p class="text-xs text-silver tracking-widest mb-4">3000mm × 90mm × 19mm • E4E / S4S</p>
+                            <p class="text-silver/70 text-xs font-light leading-relaxed mb-6">Engineered to withstand extreme weather fluctuations. Outdoor teak timber with high natural resin content, precision-cut with radius edges for safe barefoot contact.</p>
+                        </div>
+                    </div>
+                    <div class="px-8 pb-8">
+                        <div class="flex justify-between items-center text-xs border-t border-slateborder pt-4">
+                            <span class="text-kintsugi/80 font-light">Profile: Anti-Slip Radius</span>
+                            <a href="#inquiry" onclick="prefillWood('Exquisite Decking (敷板)', '3000x90x19mm')" class="text-silver hover:text-kintsugi transition-colors flex items-center space-x-1 uppercase tracking-wider text-[10px]">
+                                <span>Request Specs</span>
+                                <span>&rarr;</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="group bg-shale border border-slateborder rounded-sm overflow-hidden reveal hover:border-kintsugi/40 transition-all duration-500 flex flex-col justify-between">
+                    <div>
+                        <div class="image-container h-72 border-b border-slateborder">
+                            <img src="https://images.unsplash.com/photo-1603533867307-b354255e3c32?q=80&w=800&auto=format&fit=crop" alt="Premium Teak Joints" class="w-full h-full object-cover" loading="lazy">
+                            <span class="absolute top-4 left-4 px-3 py-1 bg-yakisugi/90 border border-kintsugi/30 text-kintsugi text-[10px] tracking-widest uppercase font-light">Interior Flawless</span>
+                        </div>
+                        <div class="p-8">
+                            <h3 class="text-xl font-serif-jp text-moku mb-3 group-hover:text-kintsugi transition-colors">Surfaced Planks (化粧材)</h3>
+                            <p class="text-xs text-silver tracking-widest mb-4">S4S Smooth Fin. • Radial Cut Option</p>
+                            <p class="text-silver/70 text-xs font-light leading-relaxed mb-6">Flawlessly smooth surfaced planks processed for luxury interior paneling, high-end furniture, or premium cabinetry. Guaranteed tight thickness tolerances.</p>
+                        </div>
+                    </div>
+                    <div class="px-8 pb-8">
+                        <div class="flex justify-between items-center text-xs border-t border-slateborder pt-4">
+                            <span class="text-kintsugi/80 font-light">Tolerance: ±0.2mm</span>
+                            <a href="#inquiry" onclick="prefillWood('Surfaced Planks (化粧材)', 'Custom Profiles')" class="text-silver hover:text-kintsugi transition-colors flex items-center space-x-1 uppercase tracking-wider text-[10px]">
+                                <span>Request Specs</span>
+                                <span>&rarr;</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="group bg-shale border border-slateborder rounded-sm overflow-hidden reveal hover:border-kintsugi/40 transition-all duration-500 flex flex-col justify-between" style="transition-delay: 150ms;">
+                    <div>
+                        <div class="image-container h-72 border-b border-slateborder">
+                            <img src="https://images.unsplash.com/photo-1610557892470-76d34ac676fa?q=80&w=800&auto=format&fit=crop" alt="Yakisugi / Shou Sugi Ban Wood" class="w-full h-full object-cover" loading="lazy">
+                            <span class="absolute top-4 left-4 px-3 py-1 bg-yakisugi/90 border border-kintsugi/30 text-kintsugi text-[10px] tracking-widest uppercase font-light">Carbonized Luxury</span>
+                        </div>
+                        <div class="p-8">
+                            <h3 class="text-xl font-serif-jp text-moku mb-3 group-hover:text-kintsugi transition-colors">Yakisugi Teak (焼杉)</h3>
+                            <p class="text-xs text-silver tracking-widest mb-4">Burnt Finish • Premium Weather Resistance</p>
+                            <p class="text-silver/70 text-xs font-light leading-relaxed mb-6">Exclusive deep carbon-black teak processed via controlled carbonization (Shou Sugi Ban). Delivers superior resistance to termites and decay with a dramatic charred aesthetic.</p>
+                        </div>
+                    </div>
+                    <div class="px-8 pb-8">
+                        <div class="flex justify-between items-center text-xs border-t border-slateborder pt-4">
+                            <span class="text-kintsugi/80 font-light">Finish: Silicate Sealed</span>
+                            <a href="#inquiry" onclick="prefillWood('Yakisugi Teak (焼杉)', 'Standard 2400x120x15mm')" class="text-silver hover:text-kintsugi transition-colors flex items-center space-x-1 uppercase tracking-wider text-[10px]">
+                                <span>Request Specs</span>
+                                <span>&rarr;</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="group bg-shale border border-slateborder rounded-sm overflow-hidden reveal hover:border-kintsugi/40 transition-all duration-500 flex flex-col justify-between" style="transition-delay: 300ms;">
+                    <div>
+                        <div class="image-container h-72 border-b border-slateborder">
+                            <img src="https://images.unsplash.com/photo-1590216259779-16c80534c0e6?q=80&w=800&auto=format&fit=crop" alt="Custom Timber Milling" class="w-full h-full object-cover" loading="lazy">
+                            <span class="absolute top-4 left-4 px-3 py-1 bg-yakisugi/90 border border-kintsugi/30 text-kintsugi text-[10px] tracking-widest uppercase font-light">Bespoke Millwork</span>
+                        </div>
+                        <div class="p-8">
+                            <h3 class="text-xl font-serif-jp text-moku mb-3 group-hover:text-kintsugi transition-colors">Bespoke Architectural (カスタム)</h3>
+                            <p class="text-xs text-silver tracking-widest mb-4">Tailored Cut • Specialized Tolerances</p>
+                            <p class="text-silver/70 text-xs font-light leading-relaxed mb-6">Bespoke custom profiles and millwork structured to accommodate highly complex architectural blueprints. Each piece is individually inspected for accuracy.</p>
+                        </div>
+                    </div>
+                    <div class="px-8 pb-8">
+                        <div class="flex justify-between items-center text-xs border-t border-slateborder pt-4">
+                            <span class="text-kintsugi/80 font-light">Standard: JIS / DIN Compliant</span>
+                            <a href="#inquiry" onclick="prefillWood('Bespoke Architectural (カスタム)', 'As per blueprints')" class="text-silver hover:text-kintsugi transition-colors flex items-center space-x-1 uppercase tracking-wider text-[10px]">
+                                <span>Request Specs</span>
+                                <span>&rarr;</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= TRUST & GLOBAL STANDARDS SECTION ================= -->
+    <section id="trust" class="py-28 px-6 lg:px-16 bg-moku border-b border-zinc-200">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+                
+                <!-- Left: Trust Marks & Description -->
+                <div class="reveal">
+                    <span class="text-kintsugi text-xs tracking-[0.4em] uppercase font-light block mb-3">GLOBAL VALIDITY</span>
+                    <h2 class="text-3xl md:text-4xl font-serif-jp text-yakisugi leading-[1.3] font-light mb-6">
+                        Tested Legality.<br>Ethical Premium Forestry.
+                    </h2>
+                    <p class="text-mokuText/80 text-sm md:text-base leading-relaxed font-light mb-10">
+                        We guarantee that every cubic meter of teak leaving our manufacturing facility complies with international timber legality standards. Through a rigorous verification system, our timber is cleared for export to highly regulated markets including the EU, USA, and East Asia.
+                    </p>
+
+                    <!-- Trust Cards -->
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="p-3 bg-white border border-zinc-200 rounded-sm mt-1">
+                                <!-- SVLK Certified Icon (Simplified SVG) -->
+                                <svg class="w-6 h-6 text-kintsugi" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-semibold tracking-wider uppercase text-yakisugi">SVLK / V-Legal Certified</h4>
+                                <p class="text-xs text-zinc-500 font-light leading-relaxed mt-1">Official Indonesian wood legality certification, recognized as equivalent to the European Union FLEGT license.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="p-3 bg-white border border-zinc-200 rounded-sm mt-1">
+                                <!-- Logistics Icon -->
+                                <svg class="w-6 h-6 text-kintsugi" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-semibold tracking-wider uppercase text-yakisugi">Global Logistics Clearance</h4>
+                                <p class="text-xs text-zinc-500 font-light leading-relaxed mt-1">Comprehensive export documentation (Phytosanitary, Bill of Lading, Certificate of Origin) ensuring smooth customs clearance at your destination port.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Active B2B Shipments map list -->
+                <div class="bg-white border border-zinc-200 p-8 md:p-12 rounded-sm shadow-xl reveal" style="transition-delay: 200ms;">
+                    <div class="flex items-center justify-between mb-8 pb-4 border-b border-zinc-100">
+                        <span class="text-xs tracking-wider uppercase font-semibold text-yakisugi">Shipment Hubs</span>
+                        <span class="text-kintsugi font-serif-jp text-xs">アクティブポート</span>
+                    </div>
+
+                    <div class="space-y-6">
+                        <!-- Port 1 -->
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center space-x-3">
+                                <span class="w-1.5 h-1.5 rounded-full bg-kintsugi"></span>
+                                <span class="text-sm font-medium text-yakisugi">Tokyo & Osaka, JP</span>
+                            </div>
+                            <span class="text-xs text-zinc-400 font-light uppercase tracking-wider">Major Trade Channel</span>
+                        </div>
+                        
+                        <!-- Port 2 -->
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center space-x-3">
+                                <span class="w-1.5 h-1.5 rounded-full bg-kintsugi"></span>
+                                <span class="text-sm font-medium text-yakisugi">Hamburg, DE</span>
+                            </div>
+                            <span class="text-xs text-zinc-400 font-light uppercase tracking-wider">Europe Hub</span>
+                        </div>
+
+                        <!-- Port 3 -->
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center space-x-3">
+                                <span class="w-1.5 h-1.5 rounded-full bg-kintsugi"></span>
+                                <span class="text-sm font-medium text-yakisugi">Dubai Port, UAE</span>
+                            </div>
+                            <span class="text-xs text-zinc-400 font-light uppercase tracking-wider">Middle East Gateway</span>
+                        </div>
+
+                        <!-- Port 4 -->
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center space-x-3">
+                                <span class="w-1.5 h-1.5 rounded-full bg-kintsugi"></span>
+                                <span class="text-sm font-medium text-yakisugi">Melbourne & Sydney, AU</span>
+                            </div>
+                            <span class="text-xs text-zinc-400 font-light uppercase tracking-wider">Oceania Channel</span>
+                        </div>
+
+                        <!-- Port 5 -->
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center space-x-3">
+                                <span class="w-1.5 h-1.5 rounded-full bg-kintsugi"></span>
+                                <span class="text-sm font-medium text-yakisugi">Singapore Hub</span>
+                            </div>
+                            <span class="text-xs text-zinc-400 font-light uppercase tracking-wider">Southeast Asia Transit</span>
+                        </div>
+                    </div>
+
+                    <!-- Short B2B Note -->
+                    <div class="mt-8 pt-6 border-t border-zinc-100 text-center">
+                        <p class="text-[11px] text-zinc-400 leading-relaxed font-light">
+                            *Minimum Order Quantity (MOQ) applies for maritime container efficiency (FCL). Please discuss requirements in the inquiry form below.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= B2B INQUIRY & PRIVATE CONFLICT CONFIGURATOR ================= -->
+    <section id="inquiry" class="py-28 lg:py-36 px-6 lg:px-16 bg-yakisugi text-moku relative">
+        <!-- Abstract glowing gold radial accent behind form -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-kintsugi/[0.03] blur-[120px] pointer-events-none"></div>
+
+        <div class="max-w-4xl mx-auto relative z-10">
+            <!-- Header -->
+            <div class="text-center mb-16 reveal">
+                <span class="text-kintsugi text-xs tracking-[0.4em] uppercase font-light block mb-3">SECURE DIRECT CHANNEL</span>
+                <h2 class="text-3xl md:text-5xl font-serif-jp font-light tracking-[0.1em] text-moku">B2B Private Message Configurator</h2>
+                <div class="w-16 h-[1px] bg-kintsugi/60 mt-6 mx-auto"></div>
+                <p class="text-xs text-silver/80 font-light max-w-xl mx-auto mt-6 leading-relaxed">
+                    We respect the confidentiality and high technical requirements of your B2B projects. Use this configurator to summarize your timber specifications, then submit them directly to our representatives via secure channels (WhatsApp / Email).
+                </p>
+            </div>
+
+            <!-- Interactive Configurator Form -->
+            <div class="bg-shale border border-slateborder p-8 md:p-12 rounded-sm shadow-2xl reveal">
+                
+                <form id="inquiryForm" onsubmit="generatePrivateMessage(event)">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        
+                        <!-- Client Identification -->
+                        <div>
+                            <label class="block text-[10px] tracking-[0.2em] uppercase font-medium text-kintsugi mb-2">Full Name / Company</label>
+                            <input type="text" id="clientName" required placeholder="e.g. Mr. John Doe / Skyline Developers Ltd." 
+                                class="w-full bg-yakisugi border border-slateborder text-moku rounded-sm px-4 py-3 text-sm focus:outline-none focus:border-kintsugi transition-colors placeholder-zinc-700">
+                        </div>
+
+                        <!-- Timber Material Selection -->
+                        <div>
+                            <label class="block text-[10px] tracking-[0.2em] uppercase font-medium text-kintsugi mb-2">Timber Material Selection</label>
+                            <select id="timberType" onchange="updateWoodGuide()" class="w-full bg-yakisugi border border-slateborder text-moku rounded-sm px-4 py-3 text-sm focus:outline-none focus:border-kintsugi transition-colors">
+                                <option value="Teak Boards (杢板)">Teak Boards (杢板) — Kiln-Dried Teak Planks</option>
+                                <option value="Heavy Beams (柱材)">Heavy Beams (柱材) — Heartwood Structural Beams</option>
+                                <option value="Exquisite Decking (敷板)">Exquisite Decking (敷板) — Radius Outdoor Decking</option>
+                                <option value="Surfaced Planks (化粧材)">Surfaced Planks (化粧材) — S4S Fine Graded Planks</option>
+                                <option value="Yakisugi Teak (焼杉)">Yakisugi Teak (焼杉) — Carbonized Scorched Teak</option>
+                                <option value="Bespoke Architectural (カスタム)">Custom Milling / As Per Architectural Blueprint</option>
+                            </select>
+                        </div>
+
+                        <!-- Dimensions / Specs Guide (Interactive Output) -->
+                        <div class="md:col-span-2 bg-yakisugi border border-slateborder p-4 rounded-sm">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-[10px] tracking-widest uppercase font-medium text-silver">Standard Dimensions Recommendation:</span>
+                                <span id="guideTag" class="text-[10px] tracking-wider text-kintsugi font-serif-jp">KD < 10% moisture</span>
+                            </div>
+                            <p id="guideText" class="text-xs text-zinc-500 font-light leading-relaxed">
+                                Kiln-dried premium teak boards. Recommended dimensions: 4000mm x 150mm x 25mm. Strict size tolerance of ±0.2mm.
+                            </p>
+                        </div>
+
+                        <!-- Dimension Input -->
+                        <div>
+                            <label class="block text-[10px] tracking-[0.2em] uppercase font-medium text-kintsugi mb-2">Custom Size Specifications (L x W x T mm)</label>
+                            <input type="text" id="woodDimensions" required placeholder="e.g. 4000 x 150 x 25 mm" 
+                                class="w-full bg-yakisugi border border-slateborder text-moku rounded-sm px-4 py-3 text-sm focus:outline-none focus:border-kintsugi transition-colors placeholder-zinc-700">
+                        </div>
+
+                        <!-- Estimated Volume / Quantity -->
+                        <div>
+                            <label class="block text-[10px] tracking-[0.2em] uppercase font-medium text-kintsugi mb-2">Estimated Quantity / Volume Required</label>
+                            <input type="text" id="woodVolume" required placeholder="e.g. 30 CBM (Cubic Meters) / 500 Pcs" 
+                                class="w-full bg-yakisugi border border-slateborder text-moku rounded-sm px-4 py-3 text-sm focus:outline-none focus:border-kintsugi transition-colors placeholder-zinc-700">
+                        </div>
+
+                        <!-- Destination Port / Country -->
+                        <div>
+                            <label class="block text-[10px] tracking-[0.2em] uppercase font-medium text-kintsugi mb-2">Destination Port / Country</label>
+                            <input type="text" id="destination" required placeholder="e.g. Tokyo Port, Japan / Hamburg, Germany" 
+                                class="w-full bg-yakisugi border border-slateborder text-moku rounded-sm px-4 py-3 text-sm focus:outline-none focus:border-kintsugi transition-colors placeholder-zinc-700">
+                        </div>
+
+                        <!-- Grade & Technical Needs -->
+                        <div>
+                            <label class="block text-[10px] tracking-[0.2em] uppercase font-medium text-kintsugi mb-2">Quality Grade & Special Regulations</label>
+                            <select id="woodGrade" class="w-full bg-yakisugi border border-slateborder text-moku rounded-sm px-4 py-3 text-sm focus:outline-none focus:border-kintsugi transition-colors">
+                                <option value="Grade A Prime (FSC/SVLK)">Grade A Prime (Heartwood Content > 95%)</option>
+                                <option value="Standard B2B Grade">Standard Export Grade (SVLK Certified)</option>
+                                <option value="Custom Spec (Requires Blueprint)">Custom Spec (Requires Technical Discussion)</option>
+                            </select>
+                        </div>
+
+                        <!-- Additional Description / Special Requirements -->
+                        <div class="md:col-span-2">
+                            <label class="block text-[10px] tracking-[0.2em] uppercase font-medium text-kintsugi mb-2">Additional Project Notes / Special Technical Needs</label>
+                            <textarea id="clientNotes" rows="3" placeholder="Specify project notes, certification requirements, target lead times, or exact structural tolerances..." 
+                                class="w-full bg-yakisugi border border-slateborder text-moku rounded-sm px-4 py-3 text-sm focus:outline-none focus:border-kintsugi transition-colors placeholder-zinc-700"></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Dynamically Formatted Text Preview Block -->
+                    <div class="mt-8 p-6 bg-yakisugi border border-slateborder rounded-sm shimmer-gold relative">
+                        <div class="absolute top-2 right-4 text-[9px] text-kintsugi font-mono uppercase tracking-widest font-bold">Secure Packaged Data</div>
+                        <h5 class="text-[10px] tracking-widest uppercase font-semibold text-kintsugi mb-3">Structured Message Preview:</h5>
+                        <div class="bg-black/40 p-4 border border-slateborder rounded-sm text-xs font-mono text-zinc-300 leading-relaxed whitespace-pre-wrap select-all" id="formattedPreview">
+Please complete the form fields above to compile your private inquiry draft...
+                        </div>
+                    </div>
+
+                    <!-- Direct Two-Way PM Channels buttons -->
+                    <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-between items-center">
+                        <div class="text-left text-xs text-zinc-400 font-light leading-tight">
+                            <span class="text-kintsugi font-medium">Secure Direct B2B Channels:</span><br>
+                            Your inquiry is compiled locally and drafted directly into your personal WhatsApp/Email client.
+                        </div>
+                        
+                        <div class="flex flex-wrap gap-4 w-full sm:w-auto">
+                            <!-- WhatsApp PM -->
+                            <button type="submit" onclick="submitToChannel('whatsapp')" class="flex-1 sm:flex-initial flex items-center justify-center space-x-2 px-6 py-3.5 bg-[#25D366] hover:bg-[#1ebd59] text-white text-xs font-medium tracking-wider uppercase rounded-sm transition-all duration-300 shadow-md">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                                </svg>
+                                <span>WhatsApp PM</span>
+                            </button>
+
+                            <!-- Email PM -->
+                            <button type="submit" onclick="submitToChannel('email')" class="flex-1 sm:flex-initial flex items-center justify-center space-x-2 px-6 py-3.5 bg-kintsugi hover:bg-kintsugiDark text-yakisugi text-xs font-semibold tracking-wider uppercase rounded-sm transition-all duration-300 shadow-md">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                </svg>
+                                <span>Email inquiry</span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="bg-yakisugi text-silver/80 py-20 px-6 lg:px-16 border-t border-slateborder">
+        <div class="max-w-7xl mx-auto">
+            
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+                <!-- Branding column -->
+                <div class="md:col-span-1">
+                    <span class="text-xs tracking-[0.3em] text-kintsugi font-medium block mb-1">杢会</span>
+                    <h3 class="text-2xl font-serif-jp font-light text-moku tracking-[0.2em] uppercase mb-6">URATKAI</h3>
+                    <p class="text-xs text-silver/60 leading-relaxed font-light mb-6">
+                        An exclusive synthesis of Indonesia's biological teak wealth and legendary Japanese woodworking precision.
+                    </p>
+                    <div class="flex space-x-3 text-[10px] text-kintsugi font-mono tracking-widest uppercase">
+                        <span>EST. 2026</span>
+                        <span>•</span>
+                        <span>Global B2B Supply</span>
+                    </div>
+                </div>
+                
+                <!-- Quick Menu Links -->
+                <div>
+                    <h4 class="text-moku text-xs tracking-[0.25em] uppercase font-semibold mb-6">Navigation</h4>
+                    <ul class="space-y-3.5 text-xs font-light">
+                        <li><a href="#home" class="hover:text-kintsugi transition-colors">Home</a></li>
+                        <li><a href="#philosophy" class="hover:text-kintsugi transition-colors">Why URATKAI</a></li>
+                        <li><a href="#catalog" class="hover:text-kintsugi transition-colors">Wood Catalog</a></li>
+                        <li><a href="#trust" class="hover:text-kintsugi transition-colors">Global Regulations</a></li>
+                    </ul>
+                </div>
+
+                <!-- Direct B2B Contact Info -->
+                <div>
+                    <h4 class="text-moku text-xs tracking-[0.25em] uppercase font-semibold mb-6">Two-Way Channels</h4>
+                    <ul class="space-y-3.5 text-xs font-light text-silver/80">
+                        <li>
+                            <span class="block text-[10px] uppercase text-zinc-500 tracking-wider">Secured PM WhatsApp:</span>
+                            <a href="https://wa.me/6281234567890" target="_blank" class="hover:text-kintsugi transition-colors">+62 812-3456-7890</a>
+                        </li>
+                        <li>
+                            <span class="block text-[10px] uppercase text-zinc-500 tracking-wider">Direct RFQ Email:</span>
+                            <a href="mailto:consultation@uratkai.com" class="hover:text-kintsugi transition-colors">consultation@uratkai.com</a>
+                        </li>
+                        <li>
+                            <span class="block text-[10px] uppercase text-zinc-500 tracking-wider">Representative HQ:</span>
+                            <span class="text-zinc-400">Moku Building, South Jakarta, Indonesia</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Technical Assurances -->
+                <div>
+                    <h4 class="text-moku text-xs tracking-[0.25em] uppercase font-semibold mb-6">Standards Complied</h4>
+                    <ul class="space-y-3 text-xs font-light text-silver/60">
+                        <li>• FLEGT / SVLK Legality Audit</li>
+                        <li>• Kiln-Dried Moisture Verification</li>
+                        <li>• Radial Grain Alignment Audit</li>
+                        <li>• JIS-1402 (Japan Standard) Tolerance</li>
+                        <li>• Custom Sea Freight Insurance</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Bottom Copyright / Signature -->
+            <div class="border-t border-slateborder pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] text-silver/40 uppercase tracking-widest">
+                <p>&copy; 2026 URATKAI (杢会). All rights reserved.</p>
+                <p class="flex items-center space-x-2">
+                    <span>Designed for Precision & Natural Luxury</span>
+                    <span class="text-kintsugi font-serif-jp">杢</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ================= FLOATING CONTACT INTERACTIVE BUTTON ================= -->
+    <!-- Minimalist luxury floating button for mobile screens -->
+    <a href="#inquiry" class="fixed bottom-6 right-6 z-30 bg-yakisugi hover:bg-shale text-kintsugi p-3.5 rounded-full border border-kintsugi/30 shadow-2xl hover:border-kintsugi transition-all duration-300 flex items-center justify-center" aria-label="Configure Inquiry">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+        </svg>
+    </a>
+
+    <!-- ================= JAVASCRIPT LOGIC ================= -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // 1. Loader removal
+            const loader = document.getElementById('loader');
+            setTimeout(() => {
+                loader.style.opacity = '0';
+                loader.style.visibility = 'hidden';
+            }, 1000);
+
+            // 2. Navbar glassmorphism scroll logic (run on scroll and load)
+            const navbar = document.getElementById('navbar');
+            const checkNavbarScroll = () => {
+                if (window.scrollY > 40) {
+                    navbar.classList.add('glass-nav');
+                    navbar.classList.remove('py-5');
+                    navbar.classList.add('py-3.5');
+                } else {
+                    navbar.classList.remove('glass-nav');
+                    navbar.classList.remove('py-3.5');
+                    navbar.classList.add('py-5');
+                }
+            };
+            window.addEventListener('scroll', checkNavbarScroll);
+            checkNavbarScroll(); // Run immediately on load
+
+            // 3. Mobile Menu Toggle Logic (with body scroll lock)
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+
+            mobileMenuBtn.addEventListener('click', () => {
+                const isOpen = !mobileMenu.classList.contains('opacity-0');
+                const line1 = document.getElementById('burger-line-1');
+                const line2 = document.getElementById('burger-line-2');
+                const line3 = document.getElementById('burger-line-3');
+
+                if (isOpen) {
+                    // Close menu
+                    mobileMenu.classList.add('opacity-0', 'invisible');
+                    mobileMenu.classList.remove('opacity-100', 'visible');
+                    document.body.classList.remove('overflow-hidden');
+                    
+                    // Reset Burger Icon
+                    line1.style.transform = 'none';
+                    line2.style.transform = 'none';
+                    line2.style.opacity = '1';
+                    line3.style.transform = 'none';
+                } else {
+                    // Open menu
+                    mobileMenu.classList.remove('opacity-0', 'invisible');
+                    mobileMenu.classList.add('opacity-100', 'visible');
+                    document.body.classList.add('overflow-hidden');
+                    
+                    // Animate to 'X'
+                    line1.style.transform = 'translateY(7.5px) rotate(45deg)';
+                    line2.style.transform = 'scale(0)';
+                    line2.style.opacity = '0';
+                    line3.style.transform = 'translateY(-7.5px) rotate(-45deg)';
+                }
+            });
+
+            // Close mobile menu on click link
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('opacity-0', 'invisible');
+                    mobileMenu.classList.remove('opacity-100', 'visible');
+                    document.body.classList.remove('overflow-hidden');
+                    
+                    // Reset Burger Icon
+                    const line1 = document.getElementById('burger-line-1');
+                    const line2 = document.getElementById('burger-line-2');
+                    const line3 = document.getElementById('burger-line-3');
+                    line1.style.transform = 'none';
+                    line2.style.transform = 'none';
+                    line2.style.opacity = '1';
+                    line3.style.transform = 'none';
+                });
+            });
+
+            // 4. Scroll Reveal trigger
+            const reveals = document.querySelectorAll('.reveal');
+            const checkReveal = () => {
+                const triggerBottom = window.innerHeight * 0.85;
+                reveals.forEach(reveal => {
+                    const revealTop = reveal.getBoundingClientRect().top;
+                    if (revealTop < triggerBottom) {
+                        reveal.classList.add('active');
+                    }
+                });
+            };
+            window.addEventListener('scroll', checkReveal);
+            setTimeout(checkReveal, 1200); // Trigger after load completes
+
+            // 5. Parallax Hero logic (Smooth GPU-accelerated & gap-free on Windows)
+            const heroBg = document.getElementById('hero-bg');
+            let scrollTicking = false;
+
+            window.addEventListener('scroll', () => {
+                if (!scrollTicking) {
+                    window.requestAnimationFrame(() => {
+                        const scrollPos = window.scrollY;
+                        if (scrollPos < window.innerHeight) {
+                            // Translate upwards slowly (negative direction) to prevent gaps.
+                            // scale(1.15) provides full padding, and will-change eliminates rendering jitter.
+                            heroBg.style.transform = `translate3d(0, -${scrollPos * 0.12}px, 0) scale(1.15)`;
+                        }
+                        scrollTicking = false;
+                    });
+                    scrollTicking = true;
+                }
+            }, { passive: true });
+
+            // 6. Configurator guide updates
+            updateWoodGuide(); 
+            setupLivePreviewUpdater();
+        });
+
+        // Interactive Specs Guidelines when user switches dropdown
+        const woodGuides = {
+            "Teak Boards (杢板)": {
+                tag: "KD < 10% Moisture • Prime grade",
+                text: "Premium kiln-dried teak boards. Recommended standard dimensions: 4000mm x 150mm x 25mm. Excellent choice for high-end exterior cladding & decking.",
+                defaultDim: "4000 x 150 x 25 mm",
+                defaultQty: "40 M3 (Cubic Meters)"
+            },
+            "Heavy Beams (柱材)": {
+                tag: "Heartwood > 95% • Structural Grade",
+                text: "Robust structural beams with high load-bearing capacity. Example dimensions: 300mm x 300mm x 6000mm. Ideal for columns or heavy frames.",
+                defaultDim: "300 x 300 x 6000 mm",
+                defaultQty: "12 Pieces"
+            },
+            "Exquisite Decking (敷板)": {
+                tag: "Anti-Slip Radius Edge • All weather",
+                text: "Weather-resistant outdoor decking. Milled with rounded edges (Radius E4E) for safety. Recommended dimensions: 3000mm x 90mm x 19mm.",
+                defaultDim: "3000 x 90 x 19 mm",
+                defaultQty: "800 Pcs"
+            },
+            "Surfaced Planks (化粧材)": {
+                tag: "S4S Flawless surface • Precision tolerance",
+                text: "Smooth planed boards on all 4 sides, virtually knot-free. Example dimensions: 2400mm x 120mm x 12mm. Perfect for interior panels & premium cabinetry.",
+                defaultDim: "2400 x 120 x 12 mm",
+                defaultQty: "1200 Pcs"
+            },
+            "Yakisugi Teak (焼杉)": {
+                tag: "Carbonized Silicate Finished",
+                text: "Teak carbonized using traditional Japanese Yakisugi methods to yield a dramatic charred black-gray texture. Standard dimensions: 2400mm x 120mm x 15mm.",
+                defaultDim: "2400 x 120 x 15 mm",
+                defaultQty: "650 Pcs"
+            },
+            "Bespoke Architectural (カスタム)": {
+                tag: "JIS / DIN Compliant Millwork",
+                text: "Custom milled profiles cut to match your CAD drawings / architectural blueprints. Please input your required specifications.",
+                defaultDim: "As per Project Blueprint",
+                defaultQty: "Custom Lot"
+            }
+        };
+
+        function updateWoodGuide() {
+            const timberVal = document.getElementById('timberType').value;
+            const guide = woodGuides[timberVal];
+            
+            if (guide) {
+                document.getElementById('guideTag').innerText = guide.tag;
+                document.getElementById('guideText').innerText = guide.text;
+                
+                // Pre-fill fields with helpful defaults if empty
+                const dimInput = document.getElementById('woodDimensions');
+                const qtyInput = document.getElementById('woodVolume');
+                dimInput.placeholder = "Anjuran: " + guide.defaultDim;
+                qtyInput.placeholder = "Contoh: " + guide.defaultQty;
+            }
+            updateLivePreview();
+        }
+
+        // Live preview generator for secure feeling
+        function updateLivePreview() {
+            const clientName = document.getElementById('clientName').value || "[Your Name / Company]";
+            const timberType = document.getElementById('timberType').value;
+            const woodDimensions = document.getElementById('woodDimensions').value || "[Not Specified]";
+            const woodVolume = document.getElementById('woodVolume').value || "[Not Specified]";
+            const destination = document.getElementById('destination').value || "[Destination Port / Country]";
+            const woodGrade = document.getElementById('woodGrade').value;
+            const clientNotes = document.getElementById('clientNotes').value || "No additional notes.";
+
+            const text = `[URATKAI DIRECT B2B INQUIRY]
+----------------------------------------------
+*Client/Company*   : ${clientName}
+*Timber Material*  : ${timberType}
+*Size Spec*        : ${woodDimensions}
+*Estimated Volume* : ${woodVolume}
+*Destination Port* : ${destination}
+*Quality Grade*    : ${woodGrade}
+*Additional Notes* : ${clientNotes}
+----------------------------------------------
+*Status*: Compiled & Ready to Dispatch`;
+
+            document.getElementById('formattedPreview').innerText = text;
+        }
+
+        function setupLivePreviewUpdater() {
+            const inputs = ['clientName', 'woodDimensions', 'woodVolume', 'destination', 'clientNotes', 'woodGrade'];
+            inputs.forEach(id => {
+                document.getElementById(id).addEventListener('input', updateLivePreview);
+                document.getElementById(id).addEventListener('change', updateLivePreview);
+            });
+        }
+
+        // Helper to trigger fast spec check from catalog items
+        function prefillWood(type, defaultDim) {
+            const typeSelect = document.getElementById('timberType');
+            typeSelect.value = type;
+            updateWoodGuide();
+            
+            document.getElementById('woodDimensions').value = defaultDim;
+            updateLivePreview();
+            
+            // Smooth scroll to inquiry form
+            document.getElementById('inquiry').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Private two-way channel routing action
+        let targetChannel = 'whatsapp';
+
+        function submitToChannel(channel) {
+            targetChannel = channel;
+        }
+
+        function generatePrivateMessage(event) {
+            event.preventDefault(); // Stop default reload
+
+            const clientName = document.getElementById('clientName').value;
+            const timberType = document.getElementById('timberType').value;
+            const woodDimensions = document.getElementById('woodDimensions').value;
+            const woodVolume = document.getElementById('woodVolume').value;
+            const destination = document.getElementById('destination').value;
+            const woodGrade = document.getElementById('woodGrade').value;
+            const clientNotes = document.getElementById('clientNotes').value || "No additional notes.";
+
+            const messageText = `[URATKAI B2B INQUIRY]
+Hello URATKAI (杢会), I am interested in placing a custom timber order. Here is the summary of our project requirements:
+
+- Company Name: ${clientName}
+- Timber Type: ${timberType}
+- Size Dimensions: ${woodDimensions}
+- Volume/Quantity: ${woodVolume}
+- Destination Port: ${destination}
+- Quality Grade: ${woodGrade}
+- Additional Notes: ${clientNotes}
+
+Please contact us privately for further technical consultation. Thank you.`;
+
+            if (targetChannel === 'whatsapp') {
+                const encodedMsg = encodeURIComponent(messageText);
+                const waUrl = `https://wa.me/6281234567890?text=${encodedMsg}`;
+                window.open(waUrl, '_blank');
+            } else if (targetChannel === 'email') {
+                const subject = `B2B Timber Inquiry - ${clientName}`;
+                const mailtoUrl = `mailto:consultation@uratkai.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(messageText)}`;
+                window.open(mailtoUrl, '_blank');
+            }
+        }
+    </script>
+</body>
+</html>
